@@ -1,0 +1,23 @@
+
+
+<h1>Champion</h1>
+<p>Here you can find all of the champions in League of Legends!</p>
+
+
+<div><%= pluralize(@champions.size, 'champion') %> found</div>
+<table class="listing" summary="Page list">
+  <tr class="header">
+    <th>Name</th>
+  </tr>
+  <% @champions.each do |champion| %>
+      <tr class="<%= cycle('odd', 'even') %>">
+        <td><%= champion.champion_name %></td>
+        <td class="actions">
+          <%= link_to("Show", {:action => 'showChampion', :id => champion.id}, :class => 'action show') %>
+        </td>
+      </tr>
+  <% end %>
+</table>
+
+</div>
+

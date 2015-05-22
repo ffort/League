@@ -1,0 +1,17 @@
+<%= link_to("<< Back to Abilities", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="abilities delete">
+  <h2>Delete Ability</h2>
+
+  <%= form_for(:@champion, :url => {:action => 'destroy', :id => @ability.id}) do |f| %>
+
+      <p>Are you sure you want to permanently delete this Ability?</p>
+
+      <p class="reference-name"><%= @ability.ability_name %></p>
+
+      <div class="form-buttons">
+        <%= submit_tag("Delete ability") %>
+      </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,1 @@
+LeagueSite::Application.config.secret_key_base = '3b2af8b3ed3b404125a7c87a9d1feefc4bf28ff347f58cbc5bb6659c150f251eca200a201de3fd3a6f586f29e93d4a168e92f2fdedd3bbe053e9819fa994d6fd'

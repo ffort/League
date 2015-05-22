@@ -1,0 +1,70 @@
+.box{
+    color:red;
+    border-style: solid;
+    padding: 20px;
+}
+
+.container{
+    color:blue;
+    border-style: dashed;
+    width:100%;
+}
+
+.outer_border{
+    padding-bottom: 10%;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background: url('http://www.themebin.com/wp-content/uploads/hd-wallpapers/1920x1200/Japan_RePainted_by_manav_photorecreated.jpg');
+    no-repeat: center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.inner_border{
+    background-color: #000000;
+    background: url('http://static.hdw.eweb4.com/media/thumbs/1/140/1394392.jpg') repeat 0 0;
+    no-repeat: center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.navbar{
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.jumbotron{
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+h1{
+    text-color: blue;
+}
+
+.page-header{
+    text-align: center;
+}
+
+.champion_name{
+    color: #ffff00;
+    height: 100px;
+    width: 100px;
+    font-size:18px;
+}
+
+table.championTable{
+    margin-left:auto;
+    margin-right:auto;
+}

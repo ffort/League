@@ -1,0 +1,49 @@
+<div class="abilities  show">
+
+  <%= link_to("<< Back to Abilites", {:action => 'index'}, :class => 'back-link') %>
+
+  <h2>Show Abilites</h2>
+
+  <table summary="Abilites detail view">
+    <tr>
+      <th>Ability Name</th>
+      <td><%= @ability.name %></td>
+    </tr>
+    <tr>
+      <th>Cost</th>
+      <td><%= @ability.cost %></td>
+    </tr>
+    <tr>
+      <th>Cooldown</th>
+      <td><%= @ability.cooldown %></td>
+    </tr>
+    <tr>
+      <th>Range</th>
+      <td><%= @ability.scope %></td>
+    </tr>
+    <tr>
+      <th>Permalink</th>
+      <td><%= @ability.permalink %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @ability.position %></td>
+    </tr>
+    <tr>
+      <th>Image</th>
+      <td><%= @ability.imageURL %></td>
+    </tr>
+    <tr>
+      <th>Active</th>
+      <td><%= @ability.active %></td>
+    </tr>
+    <tr>
+      <th>Passive</th>
+      <td><%= @ability.passive %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @ability.description %></td>
+    </tr>
+  </table>
+</div>

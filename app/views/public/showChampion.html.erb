@@ -1,0 +1,78 @@
+
+
+<div class="container">
+  <%= link_to(" <<< Champions", {:action => 'championIndex'}, :class => 'back-link') %>
+  <div class="row">
+    <div class="col-lg-12 hidden-sm hidden-xs">
+      <h1> Champion Quick Guide: <%=  @champion.champion_name %> </h1>
+    </div>
+  </div>
+
+  <br/><br/><br/>
+
+  <div class="row">
+
+    <div class="col-lg-3 box">
+      <div class="skills box">
+        <p>Skill Sequence</p>
+      </div><br/>
+      <div class="skills box">
+        <p>Final Item Build</p>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-lg-offset-1 box">
+      <img src="http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Gnar_1.jpg" class="img-responsive" alt="Cinque Terre"/>
+      <br/><br/>
+
+      <div class="row">
+        <div class="col-lg-12">
+          <table class="championTable table">
+            <tr>
+              <th><h2>Champion</h2></th>
+            </tr>
+            <tr>
+              <td>Name:</td>
+              <td> <%=  @champion.champion_name %></td>
+            </tr>
+            <tr>
+              <td>Info:</td>
+              <td><%=  @champion.primary_role %></td>
+            </tr>
+            <tr>
+              <td>Damage Type:</td>
+              <td><%=  @champion.damage_type %></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-lg-offset-1 box">
+      <div class="skills box">
+        <p>Runes</p>
+      </div><br/>
+      <div class="skills box">
+        <p>Masteries</p>
+      </div>
+    </div>
+
+  </div>
+
+  <br/><br/><br/>
+
+  <!--Stategies-->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-lg-4 box">
+        <p>Early Game</p>
+      </div>
+      <div class="col-lg-4 box">
+        <p>Mid Game</p>
+      </div>
+      <div class="col-lg-4 box">
+        <p>Late Game</p>
+      </div>
+    </div>
+  </div>
+</div>

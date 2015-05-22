@@ -1,0 +1,31 @@
+<% @page_title = "Abilities" %>
+
+<%= link_to("<< Back to champions", {:controller => 'champion', :action => 'index'}, :class => 'back-link') %>
+
+<div class="abilities index">
+
+  <h1>Abilities</h1>
+  <p>Here you can find all of the abilities in League of Legends!</p>
+
+  <%= link_to("Add Ability", {:action => 'new', :champion_id => @champion.id}, :class => 'action show') %>
+  <br/><br/><br/>
+
+  <div><%= pluralize(@abilities.size, 'abilities') %> found</div>
+
+  <table class="listing" summary="Page list">
+    <tr class="header">
+      <th>Name</th>
+    </tr>
+    <% @abilities.each do |ability| %>
+        <tr class="<%= cycle('odd', 'even') %>">
+          <td><%= ability.name %></td>
+          <td class="actions">
+            <%= link_to("Delete", {:action => 'delete', :champion_id => @champion.id}, :class => 'action delete') %>
+            <%= link_to("Show", {:action => 'show', :id => ability.id}, :class => 'action show') %>
+            <%= link_to("Edit", {:action => 'edit', :id => ability.id}, :class => 'action edit') %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+
+</div>

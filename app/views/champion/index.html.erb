@@ -1,0 +1,32 @@
+<% @page_title = "Champions" %>
+
+<%= link_to("<< Back to Menu", {:controller => 'access'}, :class => 'back-link') %>
+
+<div class="champions index">
+
+  <h1>Champion</h1>
+  <p>Here you can find all of the champions in League of Legends!</p>
+
+  <%= link_to("Add Champion", {:controller => 'champion',:action => 'new'}, :class => 'action show') %>
+  <br/><br/><br/>
+
+  <div><%= pluralize(@champions.size, 'champion') %> found</div>
+
+  <table class="listing" summary="Page list">
+    <tr class="header">
+      <th>Name</th>
+    </tr>
+    <% @champions.each do |champion| %>
+        <tr class="<%= cycle('odd', 'even') %>">
+          <td><%= champion.champion_name %></td>
+          <td class="actions">
+            <%= link_to("View Abilities", {:controller => 'abilities', :champion_id => champion.id}, :class => 'action show') %>
+            <%= link_to("Delete", {:action => 'delete', :id => champion.id}, :class => 'action delete') %>
+            <%= link_to("Show", {:action => 'show', :id => champion.id}, :class => 'action show') %>
+            <%= link_to("Edit", {:action => 'edit', :id => champion.id}, :class => 'action edit') %>
+          </td>
+        </tr>
+    <% end %>
+  </table>
+
+</div>

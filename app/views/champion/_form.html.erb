@@ -1,0 +1,35 @@
+<table summary="Champion Info ">
+  <tr>
+    <th><%= f.label(:champion_name) %></th>
+    <td><%= f.text_field(:champion_name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:primary_role) %></th>
+    <td>
+      <%= f.radio_button(:primary_role, 'Mage') %> Mage
+      <%= f.radio_button(:primary_role, 'Assassin') %> Assassin
+      <%= f.radio_button(:primary_role, 'Tank') %> Tank
+      <%= f.radio_button(:primary_role, 'Support') %> Support
+      <%= f.radio_button(:primary_role, 'Marksman') %> Marksman
+      <%= f.radio_button(:primary_role, 'Fighter') %> Fighter
+    </td>
+  </tr>
+  <tr>
+    <th><%= f.label(:secondary_role) %></th>
+    <td>
+      <%= f.radio_button(:secondary_role, 'Mage') %> Mage
+      <%= f.radio_button(:secondary_role, 'Assassin') %> Assassin
+      <%= f.radio_button(:secondary_role, 'Tank') %> Tank
+      <%= f.radio_button(:secondary_role, 'Support') %> Support
+      <%= f.radio_button(:secondary_role, 'Marksman') %> Marksman
+      <%= f.radio_button(:secondary_role, 'Fighter') %> Fighter    </td>
+  </tr>
+  <tr>
+    <th><%= f.label(:damage_type) %></th>
+    <td><%= f.text_field(:damage_type) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:permalink) %></th>
+    <td><%= f.text_field(:permalink) %></td>
+  </tr>
+</table>

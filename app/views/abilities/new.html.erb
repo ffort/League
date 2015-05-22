@@ -1,0 +1,15 @@
+<%= link_to("Back to Abilities", {:action => 'index', :champion_id => @champion.id}, :class => 'back-link') %>
+
+<div class="abilities new">
+  <h2>Add Ability</h2>
+
+  <%= form_for(:ability, :url => {:action => 'create', :champion_id => @champion.id}) do |f| %>
+
+      <%= render(:partial => "form", :locals => {:f => f}) %>
+
+      <div class="form-buttons">
+        <%= submit_tag("Create Ability") %>
+      </div>
+
+  <% end %>
+</div>

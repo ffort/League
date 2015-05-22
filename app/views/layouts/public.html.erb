@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Bronze Potatoes <%= " | #{@page_title}" if @page_title %></title>
+      <%= stylesheet_link_tag('application', :media => 'all') %>
+      <div id="navigation ">
+        <%= render(:partial => "layouts/navigation", :locals => {:subjects => @subjects}) %>
+      </div>
+    </head>
+
+<body>
+<div class="outer_border">
+  <br/>
+  <div class="inner_border">
+    <div id="header">
+      <h1>Bronze Potatoes</h1>
+    </div>
+    <div id="main">
+
+      <div id="content">
+        <%= yield %>
+      </div>
+      <div class="clear">
+      </div>
+    </div>
+    <div id="footer">
+      <p id="copyright">&copy; League Of Legends! / Fernando Fort </p>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

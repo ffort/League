@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>League Site <%= " | #{@page_title}" if @page_title %></title>
+</head>
+
+<body>
+<div class="outer_border">
+  <br/>
+  <div class="inner_border">
+    <div id="header">
+      <h1>League Site</h1>
+    </div>
+
+    <div id="main">
+
+      <div id="content">
+        <%= yield :header %>
+        <%= yield %>
+
+        <div class="row box">
+          <h5>Champion Info box</h5>
+          <div class="row">
+              <div class="col-lg-2 box champion picture">
+                <h5>Picture</h5>
+              </div>
+            <div class="col-lg-2 box champion picture">
+              <h5>Stats</h5>
+            </div>
+
+          <div class="col-lg-2 box champion picture">
+            <img src=""/>
+          </div>
+        </div>
+
+        </div>
+
+    <div class="row">
+          <div class="col-lg-3 box">
+              <div class="col-lg-3 box">
+                <%= yield :champion_name%>
+              </div>
+              <div class="col-lg-2 box">
+                 <%= yield :champion_PRole%>
+              </div>
+              <div class="col-lg-2 box">
+                 <%= yield :champion_SRole%>
+              </div>
+              <div class="col-lg-3 box">
+                <%= yield :damage_type%>
+              </div>
+          </div>
+
+          <div class="col-lg-3 box">
+            <div class="col-lg-3 box">
+              <%= yield :champion_name%>
+            </div>
+            <div class="col-lg-2 box">
+              <%= yield :champion_PRole%>
+            </div>
+            <div class="col-lg-2 box">
+              <%= yield :champion_SRole%>
+            </div>
+            <div class="col-lg-3 box">
+              <%= yield :damage_type%>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <div class="clear">
+      </div>
+    </div>
+
+    <div id="footer">
+      <p id="copyright">&copy; League Of Legends! / Fernando Fort </p>
+    </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

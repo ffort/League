@@ -1,0 +1,18 @@
+<% subjects ||= [] %>
+<ul>
+  <h4> Navigation Menu</h4>
+  <li><%= link_to("Home", {:controller => 'public', :action => 'index' }) %></li>
+  <% subjects.each do |subject| %>
+      <li>
+        <div class = "label label-default">
+            <%= subject.name %>
+        </div>
+        <ul>
+          <% subject.pages.visible.sorted.each do |page| %>
+              <li><%= link_to_unless_current(page.name, {:action => 'show', :permalink => page.permalink}) %></li>
+          <% end %>
+        </ul>
+      </li>
+  <% end %>
+  <li><%= link_to("Champions", {:controller => 'public', :action => 'championIndex' }) %></li>
+</ul>

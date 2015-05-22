@@ -1,0 +1,41 @@
+<table summary="Ability Info ">
+  <tr>
+    <th><%= f.label(:name, "Name") %></th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:cooldown, "Cooldown") %></th>
+    <td><%= f.text_field(:cooldown) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:cost, "Cost") %></th>
+    <td><%= f.text_field(:cost) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:scope, "Range") %></th>
+    <td><%= f.text_field(:scope) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:ability_type) %></th>
+    <td>
+      <%= f.radio_button(:ability_type, 'Passive') %> Passive
+      <%= f.radio_button(:ability_type, 'Regular') %> Regular
+      <%= f.radio_button(:ability_type, 'Ultimate') %> Ultimate
+    </td>
+  </tr>
+  <tr>
+    <th><%= f.label(:description, "Description") %></th>
+    <td><%= f.text_area(:description, :size => "40x2") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:active) %></th>
+    <td><%= f.text_area(:active, :size => "40x2") %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:passive) %></th>
+    <td><%= f.text_area(:passive, :size => "40x2") %></td>
+  </tr>
+  <tr>
+    <tr><%= hidden_field(:champion_id) %></td>
+  </tr>
+</table>

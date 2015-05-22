@@ -1,0 +1,29 @@
+<div class="champions show">
+
+  <%= link_to("<< Back to Abilities", {:controller => 'champion', :action => 'index'}, :class => 'back-link') %>
+
+  <h2>Show Ability</h2>
+
+  <table summary="Ability detail view">
+    <tr>
+      <th>Ability Name</th>
+      <td><%= @ability.name %></td>
+    </tr>
+    <tr>
+      <th>Active</th>
+      <td><%= @ability.active %></td>
+    </tr>
+    <tr>
+      <th>Passive</th>
+      <td><%= @ability.passive %></td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td><%= @ability.description %></td>
+    </tr>
+    <tr>
+      <th>Range</th>
+      <td><%= @ability.scope %></td>
+    </tr>
+  </table>
+</div>

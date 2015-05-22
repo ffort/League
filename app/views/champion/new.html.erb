@@ -1,0 +1,20 @@
+<%= link_to("<< Back to Champions", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="champions new">
+  <h2>Add Champion</h2>
+
+<div class="release link">
+  <h3>Use <a href="http://leagueoflegends.wikia.com/wiki/Category:Champions_by_release">this link</a> to add the champions. I added them alphabetically by year. So, 2009 champs are ordered A-Z in the first 41 rows and 2010 champions in the next 24 rows A-Z. With Fizz being the last one added from 2011. </h3>
+</div>
+
+  <%= form_for(:champion, :url => {:action => 'create'}) do |f| %>
+
+      <%= render(:partial => "form", :locals => {:f => f}) %>
+
+
+      <div class="form-buttons">
+        <%= submit_tag("Create Champion") %>
+      </div>
+
+  <% end %>
+</div>
